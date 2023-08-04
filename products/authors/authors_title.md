@@ -79,7 +79,7 @@ When using a threshold value of 0.63, we achieve the highest accuracy, which mea
 
 ## Architecture
 ### Author Comparison
-![Author Comparison](/assets/doc/Author_Comparison.png)
+![Author Comparison](/gh-pages/assets/doc/Author_Comparison.png)
 
 ### Author List Comparison
 In this comparison, scenarios where one list contains more authors than the other is addressed. To achieve this, comparison between the author list with more authors and the author list with fewer authors is done. This ensures that we obtain distinct similarity scores for the following cases:
@@ -89,7 +89,7 @@ In this comparison, scenarios where one list contains more authors than the othe
 
 By handling these cases separately, obtaining the same scores for both scenarios can be avoided, providing more accurate and informative results.
 
-![Author Lists Comparison](/assets/doc/AuthorList_Comparison.png)
+![Author Lists Comparison](/gh-pages/assets/doc/AuthorList_Comparison.png)
 
 ## References
 - <https://github.com/allenai/SPECTER2_0>
