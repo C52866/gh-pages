@@ -6,10 +6,7 @@ tags:
 header:
   title: "Authors"
   desc: "Authors Description"
-sections:
-- name: "AuthorPage"
-  head_link: "/gh-pages/ai/authors/authorpage/"
-  head_content: "Authors Description"
+sections: []
 product: null
 permalink: "/ai/authors/"
 
