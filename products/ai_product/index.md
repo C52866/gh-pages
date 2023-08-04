@@ -8,7 +8,7 @@ header:
   desc: "AI Product Description"
 sections:
 - name: "Page 1"
-  head_link: "{{ site.baseurl }}/ai/ai_product/page_1/"
+  head_link: "ai/ai_product/page_1/"
   head_content: "Short Desc"
 product: null
 permalink: "/ai/ai_product/"
