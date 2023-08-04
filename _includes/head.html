@@ -10,8 +10,8 @@
         <meta name="description" content="{{page.excerpt | strip_html | strip}}" />
         <meta property="og:description" content="{{page.excerpt | strip_html| strip}}" />
     {% endif %}
-    <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <link rel="canonical" href="{{site.baseurl}}{{page.url}}" />
+    <meta property="og:url" content="{{site.baseurl}}{{page.url}}" />
 
     <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -19,13 +19,13 @@
 	rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<link href="{{site.url}}/assets/vendor/bootstrap/css/bootstrap.min.css"	rel="stylesheet">
-<link href="{{site.url}}/assets/vendor/bootstrap-icons/bootstrap-icons.css"	rel="stylesheet">
-<link href="{{site.url}}/assets/vendor/datatable/css/dataTables.bootstrap5.min.css"	rel="stylesheet"> 
-<link rel="stylesheet" href="{{site.url}}/assets/vendor/font-awesome/css/font-awesome.min.css">
+<link href="{{site.baseurl}}/assets/vendor/bootstrap/css/bootstrap.min.css"	rel="stylesheet">
+<link href="{{site.baseurl}}/assets/vendor/bootstrap-icons/bootstrap-icons.css"	rel="stylesheet">
+<link href="{{site.baseurl}}/assets/vendor/datatable/css/dataTables.bootstrap5.min.css"	rel="stylesheet"> 
+<link rel="stylesheet" href="{{site.baseurl}}/assets/vendor/font-awesome/css/font-awesome.min.css">
 <!-- Template Main CSS File -->
-<link href="{{site.url}}/assets/css/style.css" rel="stylesheet">
-<link href="{{site.url}}/assets/css/syntax.css" rel="stylesheet">
+<link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
+<link href="{{site.baseurl}}/assets/css/syntax.css" rel="stylesheet">
 
 
 </head>
