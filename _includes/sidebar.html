@@ -1,0 +1,110 @@
+<!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item">
+        <a class="nav-link " href="/">
+            <i class="bi bi-grid"></i>
+            <span>Home</span>
+        </a>
+     </li>
+     {%- assign product = page.product -%}
+     {% for item in site.data.settings.menu[product] %}
+     <li class="nav-item">
+     <!-- If has submenus -->
+     {% if item.submenu %}
+     {%- assign itemindx = forloop.index -%}
+      <a class="nav-link collapsed" data-bs-target="#components-nav{{itemindx}}" data-bs-toggle="collapse" href="{{item.link}}">
+        <i class="{{item.icon}}"></i><span>{{item.name}}</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      
+      <ul id="components-nav{{itemindx}}" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        {% for subitem in item.submenu %}
+          <li class="nav-item">
+            <!-- If has submenus -->
+            {% if subitem.submenu %}
+            {%- assign itemindx_1 = forloop.index -%}
+             <a class="nav-link collapsed" data-bs-target="#components-nav{{itemindx}}{{itemindx_1}}" data-bs-toggle="collapse" href="{{subitem.link}}">
+                <i class="{{subitem.icon}}"></i><span>{{subitem.name}}</span><i class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="components-nav{{itemindx}}{{itemindx_1}}" class="nav-content collapse" data-bs-parent="#components-nav{{itemindx}}">
+                {% for subitem2 in subitem.submenu %}
+                <li class="nav-item">
+                 <!-- If has submenus -->
+                 {% if subitem2.submenu %}
+                 {%- assign itemindx_2 = forloop.index -%}
+                  <a class="nav-link collapsed" data-bs-target="#components-nav{{itemindx}}{{itemindx_1}}{{itemindx_2}}" data-bs-toggle="collapse" href="{{subitem2.link}}">
+                    <i class="{{subitem2.icon}}"></i><span>{{subitem2.name}}</span><i class="bi bi-chevron-down ms-auto"></i>
+                  </a>
+                  <ul id="components-nav{{itemindx}}{{itemindx_1}}{{itemindx_2}}" class="nav-content collapse" data-bs-parent="#components-nav{{itemindx}}{{itemindx_1}}">
+                    {% for subitem3 in subitem2.submenu %}
+                    <li class="nav-item">
+                     <!-- If has submenus -->
+                     {% if subitem3.submenu %}
+                     {%- assign itemindx_3 = forloop.index -%}
+                     <a class="nav-link collapsed" data-bs-target="#components-nav{{itemindx}}{{itemindx_1}}{{itemindx_2}}{{itemindx_3}}" data-bs-toggle="collapse" href="{{subitem3.link}}">
+                        <i class="{{subitem3.icon}}"></i><span>{{subitem3.name}}</span><i class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="components-nav{{itemindx}}{{itemindx_1}}{{itemindx_2}}{{itemindx_3}}" class="nav-content collapse" data-bs-parent="#components-nav{{itemindx}}{{itemindx_1}}{{itemindx_2}}">
+                        {% for subitem4 in subitem.submenu %}
+                        <li class="nav-item">
+                         <!-- If has submenus -->
+                         {% if subitem4.submenu %}
+                         {%- assign itemindx_4 = forloop.index -%}
+                         
+                         
+                        
+                         {% else %}
+                         <a class="nav-link" href="{{subitem4.link}}">
+                            <i class="{{subitem4.icon}}"></i>
+                            <span>{{subitem4.name}}</span>
+                          </a>
+                         {% endif %}
+                        </li>
+                        {% endfor %}
+                        </ul>
+                     {% else %}
+                     <a class="nav-link" href="{{subitem3.link}}">
+                        <i class="{{subitem3.icon}}"></i>
+                        <span>{{subitem3.name}}</span>
+                      </a>
+                     {% endif %}
+                    </li>
+                    {% endfor %}
+                  </ul>
+                 {% else %}
+                 <a class="nav-link" href="{{subitem2.link}}">
+                    <i class="{{subitem2.icon}}"></i>
+                    <span>{{subitem2.name}}</span>
+                  </a>
+                 {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+            <a class="nav-link" href="{{subitem.link}}">
+                <i class="{{subitem.icon}}"></i>
+                <span>{{subitem.name}}</span>
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+     {% else %}
+      <a class="nav-link" href="{{item.link}}">
+        <i class="{{item.icon}}"></i>
+        <span>{{item.name}}</span>
+      </a>
+     {% endif %}
+     </li>
+     {% endfor %}
+     <!-- End Components Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+  
+  <div id="spinner-overlay">
+  <div class="cv-spinner">
+    <span class="spinner"></span>
+  </div>
+</div>

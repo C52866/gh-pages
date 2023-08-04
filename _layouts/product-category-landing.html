@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+{% include head.html %}
+<style>
+    .landing-container{
+        padding: 0;
+    }
+    
+    .landing-heading-container{
+        font-size: 16px!important;
+        line-height: 24px!important;
+        background-image: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .landing-heading-wrapper{
+        text-align: center;
+        max-width: 1200px;
+        width: 100%;
+        font-size: 16px!important;
+        line-height: 24px!important;
+    }
+    .landing-heading-wrapper h1{
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 50px;
+        scroll-margin-top: 100px;
+    }
+    .landing-sections-wrapper .card{
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-top: 20px;
+        border:none;
+        border-radius: 0;
+        float:left;
+        padding: 10px;
+        box-shadow: unset;
+        margin-bottom: 0;
+        min-height: 160px;
+    }
+    .landing-sections-wrapper .card-body{
+        border: 1px solid rgba(19, 24, 44, .125);
+        background-clip: border-box;
+        border-radius: 0.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+    }
+    
+</style>
+
+<body class="toggle-sidebar">
+	{% include header.html %}
+	<main id="main" class="main">
+        <div class="landing-container">
+
+            {% if page.header %}
+            <div class="bg-landing-wrapper">
+                <div class="landing-heading-container">
+                    <div class="landing-heading-wrapper">
+        
+                        <h1>{{page.header.title}}</h1>
+                        <div>{{page.header.desc}}</div>
+        
+                    </div>
+        
+                </div>
+            </div>
+            {% endif %}
+
+            {% if page.sections %}
+            <div class="landing-sections-wrapper">
+                {% for section in page.sections %}
+                 <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="{{section.head_link}}">{{section.name}}</a></h5>
+                      <p class="card-text">{{section.head_content}}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        
+        </div>
+    <!-- Additional Content Goes Here-->    
+    {{content}}
+    </main>
+	{% include footer.html %}
+</body>
+</html>

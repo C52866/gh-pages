@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+{% include head.html %}
+<body>
+	{% include header.html %}
+	{% include sidebar.html %}
+	<main id="main" class="main">
+	{% if page.hidebreadcrumb %}
+	{% else %}
+	{% include breadcrumb.html %}
+	{% endif %}
+	{% if page.toc %}
+	<div class="row col">
+		<div class="col col-md-9">
+			{{content}}
+		</div>
+		<div class="col col-md-3">
+			{% include toc.html %}
+		</div>
+	</div>
+	{% else %}
+		{{content}}
+	{% endif %}
+	
+    </main>
+	{% include footer.html %}
+</body>
+</html>

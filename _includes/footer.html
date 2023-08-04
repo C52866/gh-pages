@@ -1,0 +1,69 @@
+
+
+
+ <!-- footer id="footer" class="footer">
+    <div class="copyright">
+      <strong><span></span></strong>
+    </div>
+    <div class="copyright">
+    &copy; 2023 Copyright <strong><span>ACS</span></strong>.
+    </div>
+  </footer --><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="/assets/vendor/jquery/js/jquery-3.5.1.js"></script>
+  <script src="/assets/vendor/jquery/js/jquery-ui.js"></script>
+  <script src="/assets/vendor/search/search.js"></script>
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+  <script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search_field'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: '{{ site.baseurl }}/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{discription}"><div class="search-title"> {title} </div> <div class="search-desc">{discription}</div></a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: []
+    });
+</script>
+  <script>
+   jQuery(function($){
+       
+   $(".nav-link").click(function(){
+         var _target= $(this).data('bs-target');
+         if(_target){
+             document.cookie = "_link="+_target+"; path=/";
+         }
+   });
+ 
+   function getCookie(cname) {
+       let name = cname + "=";
+       let decodedCookie = decodeURIComponent(document.cookie);
+       let ca = decodedCookie.split(';');
+       for(let i = 0; i <ca.length; i++) {
+         let c = ca[i];
+         while (c.charAt(0) == ' ') {
+           c = c.substring(1);
+         }
+         if (c.indexOf(name) == 0) {
+           return c.substring(name.length, c.length);
+         }
+       }
+       return "";
+     }
+    var c = getCookie('_link');
+   if(c){
+         $(".nav-link[data-bs-target='"+c+"']").removeClass('collapsed');
+         $("ul"+c).addClass('show');
+    }
+   
+ });
+ 
+   </script>
