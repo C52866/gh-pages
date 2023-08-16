@@ -40,6 +40,7 @@ jobs:
         with:
           repository: ys-ramkumar/gh-pages-publish
           path: ./publish-pages/
+          token: ${{ secrets.WRITE_TOKEN }}
       - name: Move Build Files to Publish Pages Directory
         run: cp -rf _site/* publish-pages && ls publish-pages     
       - name: Add & Commit to Publish Pages Repository
