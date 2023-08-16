@@ -52,7 +52,6 @@ jobs:
         uses: EndBug/add-and-commit@v9.1.3
         with:
           cwd: publish-pages
-          fetch: true
 
 
       
