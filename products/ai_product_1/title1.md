@@ -7,8 +7,8 @@ header:
   title: null
   desc: null
 sections: []
-product: "ai_product"
-permalink: "/ai/ai_product/page_1/"
+product: "ai_product_1"
+permalink: "/ai/ai_product_1/page_1/"
 toc: []
 
 ---
