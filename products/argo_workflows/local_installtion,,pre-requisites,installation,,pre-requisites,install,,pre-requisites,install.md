@@ -1,6 +1,6 @@
 ---
 layout: "product"
-title: "Local Installtion"
+title: "Local Installtion,,Pre-requisites,Installation,,Pre-requisites,Install,,Pre-requisites,Install"
 tags:
 - "Argo Workflows"
 - " Local Installation"

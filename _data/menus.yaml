@@ -3,17 +3,21 @@ ai_product_1:
 - id: 1
   http: "#"
   title: "Install"
+  icon: null
   children:
   - id: 2
     http: "#"
     title: "Local"
+    icon: null
     children:
     - id: 3
       http: "/ai/setup"
       title: "Setup"
+      icon: null
       children: null
     - id: 4
       http: "/ai/configuration"
       title: "Configuration"
+      icon: null
       children: null
 
