@@ -3,19 +3,19 @@
 <label>Table of contents</label>
 <ul class="toc-bar">
     {% for titem in page.toc %}
-    <li><a href="#{{titem.ref}}">{{titem.name}}</a></li>
+    <li><a href="#{{titem.http}}">{{titem.title}}</a></li>
     {% if titem.children %}
       <ul class="toc-bar-children">
         {% for titem1 in titem.children %}
-        <li><a href="#{{titem1.ref}}">{{titem1.name}}</a></li>
+        <li><a href="#{{titem1.http}}">{{titem1.title}}</a></li>
         {% if titem1.children %}
          <ul class="toc-bar-children">
             {% for titem2 in titem1.children %}
-            <li><a href="#{{titem2.ref}}">{{titem2.name}}</a></li>
+            <li><a href="#{{titem2.http}}">{{titem2.title}}</a></li>
             {% if titem2.children %}
              <ul class="toc-bar-children">
                 {% for titem3 in titem2.children %}
-                <li><a href="#{{titem3.ref}}">{{titem3.name}}</a></li>
+                <li><a href="#{{titem3.http}}">{{titem3.title}}</a></li>
                 {% if titem3.children %}
                     
                 {% endif %}
