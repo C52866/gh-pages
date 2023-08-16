@@ -9,7 +9,7 @@ header:
   desc: null
 sections: []
 product: "argo_workflows"
-permalink: "/infrastructure/argo_workflows/argo_installation_local/"
+permalink: "/infrastructure/argo_workflows/argo_installation_local"
 toc: []
 
 ---
