@@ -26,9 +26,73 @@ main a {
 .tag-links-container{
     padding-top: 25px;
 }
+.heirarchy{
+    width: 30%;
+    margin: 0 auto;
+}
+.heirarchy #tree a{
+    color: black
+}
+.heirarchy #tree :hover{
+    color: black
+}
     </style>
 	<main id="main" class="main">
     
+
+        <!-- Heirarchy Structure -->
+
+        {% if page.tree %}       
+        <div class="container heirarchy-container">
+         <div class="heirarchy">
+            <h5 class="">Heirarchy Structure of Documentation</h5>
+            <ul id ="tree">
+                {% for tree1 in page.tree %}
+                    <li><a href="{{site.baseurl}}{{tree1.link}}">{{tree1.title}}</a>
+                    {% if tree1.children.size > 0 %} 
+                     <ul>
+                        {% for tree2 in tree1.children %}
+                          <li><a href="{{site.baseurl}}{{tree2.link}}">{{tree2.title}}</a>
+                            {% if tree2.children.size > 0 %} 
+                            <ul>
+                               {% for tree3 in tree2.children %}
+                                 <li><a href="{{site.baseurl}}{{tree3.link}}">{{tree3.title}}</a>
+                                    {% if tree3.children.size > 0 %} 
+                                    <ul>
+                                       {% for tree4 in tree3.children %}
+                                         <li><a href="{{site.baseurl}}{{tree4.link}}">{{tree4.title}}</a>
+                                            {% if tree4.children.size > 0 %} 
+                                            <ul>
+                                               {% for tree5 in tree4.children %}
+                                                 <li><a href="{{site.baseurl}}{{tree5.link}}">{{tree5.title}}</a>
+                                                  
+                                                 </li>
+                                               {% endfor %}
+                                            </ul>
+                                           {% endif %}
+                                         </li>
+                                       {% endfor %}
+                                    </ul>
+                                   {% endif %}
+                                 </li>
+                               {% endfor %}
+                            </ul>
+                           {% endif %}
+                          </li>
+                        {% endfor %}
+                     </ul>
+                    {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+         </div>
+        </div>
+        {% endif %}
+
+
+
+
+
         {% assign rawtags = "" %}
         {% for post in site.pages %}
         {% assign ttags = post.tags | join:'|' | append:'|' %}
@@ -75,5 +139,17 @@ main a {
         </div>
     </main>
 	{% include footer.html %}
+
+    <script>
+
+        $(document).ready(function(){
+            $('ul#tree').mgaccordion({
+                theme: "tree"
+            });
+        });
+
+    </script>
+
+
 </body>
 </html>

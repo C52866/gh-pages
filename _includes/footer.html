@@ -20,6 +20,10 @@
   <!-- Template Main JS File -->
   <script src="{{site.baseurl}}/assets/js/main.js"></script>
 
+  {% if page.layout =='tags' %}
+     <script src="{{site.baseurl}}/assets/vendor/tree/mgaccordion.js"></script>
+  {% endif %}
+
 
   <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
