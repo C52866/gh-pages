@@ -1,0 +1,30 @@
+# Product - Argo Workflows
+argoworkflows:
+ - name: About
+   link: /infrastructure/argoworkflows/about
+   icon: "bi bi-grid"
+ - name: Installation
+   link: "#"
+   icon: "bi bi-grid"
+   submenu:
+     - name: Local Installation
+       link: "#"
+       icon: "bi bi-grid"
+       submenu:
+         - name: Pre-Installation
+           link: /infrastructure/argoworkflows/preinstall-local
+           icon: "bi bi-menu-button-wide"
+         - name: Installation
+           link: /infrastructure/argoworkflows/install-local
+           icon: "bi bi-menu-button-wide"
+     - name: GKE Installation
+       link: "#"
+       icon: "bi bi-grid"
+       submenu:
+         - name: Pre-Installation
+           link: /infrastructure/argoworkflows/preinstall-gke
+           icon: "bi bi-menu-button-wide"
+         - name: Installation
+           link: /infrastructure/argoworkflows/install-gke
+           icon: "bi bi-menu-button-wide"
+

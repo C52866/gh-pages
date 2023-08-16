@@ -9,7 +9,7 @@
         </a>
      </li>
      {%- assign product = page.product -%}
-     {% for item in site.data.settings.menu[product] %}
+     {% for item in site.data.menus[product] %}
      <li class="nav-item">
      <!-- If has submenus -->
      {% if item.submenu %}
