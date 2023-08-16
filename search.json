@@ -8,7 +8,7 @@ layout: null
       "title"    : "{{ page.title | escape }} ",
       "tags"     : "{{ page.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ page.url }}",
-      "discription" : " {{ page.excerpt | strip_html | strip_newlines | escape }}"
+      "discription" : " {{ page.metaDescription | strip_html | strip_newlines | escape }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
