@@ -49,7 +49,7 @@ jobs:
           java-version: 8
           distribution: 'temurin'
       - name: Build Static Files War
-        run: jar -cvf deploy.war publish-pages/* && mv deploy.war publish-pages
+        run: cd publish-pages && rm -f deploy.war && jar -cvf deploy.war *
       - name: Add & Commit to Publish Pages Repository
         uses: EndBug/add-and-commit@v9.1.3
         with:
