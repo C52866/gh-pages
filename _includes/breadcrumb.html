@@ -1,16 +1,16 @@
 <div class="bredcrumb-container">
     <ul class="breadcrumb">
-        <li><a href="/"><i class="icon-home"></i>Home</a> </li>
+        <li><a href="{{site.baseurl}}/"><i class="icon-home"></i>Home</a> </li>
         {% assign crumbs = page.url | split: '/' %}
         {% assign crumbstotal = crumbs | size %}
         {% assign crumbs_path = '/' %}
         {% for crumb in crumbs offset:1 %}
             {% assign crumbs_path = crumbs_path | append: crumb | append: '/' %}
-            {% unless crumb == 'index.html' %}
+              {% unless crumb == 'index.html' %}
                 {% if forloop.last %}
-                {% assign crumbs_path = '#' %}
+                {% assign crumbs_path = crumbs_path | append: '#' %}
                 {% endif %}
-                <li><span class="divider">&#187;&nbsp;</span> <a href="{{crumbs_path}}">{{ crumb | remove: '.html' | capitalize }}</a></li>
+                <li><span class="divider">&#187;&nbsp;</span> <a href="{{site.baseurl}}{{crumbs_path}}">{{ crumb | remove: '.html' | capitalize }}</a></li>
             {% endunless %}
         {% endfor %}
     </ul>
