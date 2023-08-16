@@ -1,6 +1,7 @@
 ---
 layout: "product"
 title: "Local Installtion"
+metaDescription: "Explains about argo workflows local setup"
 tags:
 - "Argo Workflows"
 - " Local Installation"

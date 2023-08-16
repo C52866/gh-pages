@@ -1,6 +1,7 @@
 ---
 layout: "product-landing"
 title: "AI Product 1"
+metaDescription: null
 tags:
 - "AI Product 1"
 header:

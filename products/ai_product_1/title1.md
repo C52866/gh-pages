@@ -1,6 +1,7 @@
 ---
 layout: "product"
 title: "Title1"
+metaDescription: "Short Desc"
 tags:
 - "AI Tag"
 header:
