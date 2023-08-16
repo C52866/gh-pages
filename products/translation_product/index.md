@@ -7,7 +7,7 @@ header:
   title: "Translation Product"
   desc: "Translation Product Description"
 sections: []
-product: null
+product: "translation_product"
 permalink: "/llm/translation_product/"
 
 ---
