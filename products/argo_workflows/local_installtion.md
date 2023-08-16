@@ -10,7 +10,17 @@ header:
 sections: []
 product: "argo_workflows"
 permalink: "/infrastructure/argo_workflows/argo_installation_local"
-toc: []
+toc:
+- id: 1
+  http: "pre-requisites"
+  title: "Pre-requisites"
+  icon: null
+  children: null
+- id: 2
+  http: "installation"
+  title: "Install"
+  icon: null
+  children: null
 
 ---
 ## Introduction
