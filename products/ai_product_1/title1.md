@@ -9,7 +9,7 @@ header:
   desc: null
 sections: []
 product: "ai_product_1"
-permalink: "/ai/ai_product_1/page_1"
+permalink: "/ai/ai_product_1/page_1.html"
 toc: []
 
 ---
