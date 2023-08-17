@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 .bundle
 vendor/bundle
+vendor/cache
+vendor/gems
+vendor/ruby
