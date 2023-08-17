@@ -3,8 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-# Sample workflow for building and push to another repository
-name: Build Jekyll site
+name: Build and Pack Jekyll
 
 on:
   # Allows you to run this workflow manually from the Actions tab
