@@ -128,7 +128,7 @@ main a {
           {% for post in site.pages %}
           {% if post.tags contains tag %}
           <li>
-              <a href="{{ post.url }}">
+              <a href="{{site.baseurl}}{{ post.url }}">
                 {{ post.title }}
               </a>
           </li>
