@@ -1,7 +1,7 @@
 ---
 layout: "product"
 title: "Local Installtion"
-metaDescription: "Explains about argo workflows local setup"
+metaDescription: "Similarity score between two authors or between two authors lists"
 tags:
 - "Argo Workflows"
 - " Local Installation"

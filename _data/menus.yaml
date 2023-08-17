@@ -1,5 +1,5 @@
 ---
-ai_product_1:
+author_similarity:
 - id: 1
   http: "#"
   title: "Install"

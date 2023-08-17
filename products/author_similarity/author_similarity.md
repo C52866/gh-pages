@@ -1,15 +1,15 @@
 ---
 layout: "product"
-title: "Title1"
-metaDescription: "Short Desc"
+title: "Author Similarity"
+metaDescription: "Similarity score between two authors or between two authors lists."
 tags:
-- "AI Tag"
+- "Author Similarity"
 header:
   title: null
   desc: null
 sections: []
-product: "ai_product_1"
-permalink: "/ai/ai_product_1/page_1.html"
+product: "author_similarity"
+permalink: "/ai/author_similarity/author_similarity_overview.html"
 toc: []
 
 ---
