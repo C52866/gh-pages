@@ -153,7 +153,7 @@ pred_clusters, pred_distance_matrices = clusterer.predict(anddata.get_blocks(), 
 
 ```
 
-![S2AND Author Data Preparation Controlled Data](../doc/Data_Preparation_S2AND.png)
+![S2AND Author Data Preparation Controlled Data](/gh-pages/assets/doc/Data_Preparation_S2AND.png)
 
 ##### Predicting for ACS Controlled Dataset
 
@@ -174,7 +174,7 @@ e) Get score with highest similarity in target author list for each source autho
   
 f) Take an average of scores generated in e, which is author list similarity score between source and target authors.
 
-![S2AND Author Evaluation Using Controlled Data](../doc/author_eval_S2AND.png)
+![S2AND Author Evaluation Using Controlled Data](/gh-pages/assets/doc/author_eval_S2AND.png)
 
 ### SPECTER2.0
 
@@ -204,7 +204,7 @@ specter2_model.encode(['We introduce a new language representation model called 
 Reference file : prepare_dataset_specter2.py
 Output : {author_id:embedding}
 
-![SPECTER2 Author Evaluation Using Controlled Data](../doc/Data_Preparation_SPECTER2.png)
+![SPECTER2 Author Evaluation Using Controlled Data](/gh-pages/assets/doc/Data_Preparation_SPECTER2.png)
 
 #### Inferencing
 
@@ -228,7 +228,7 @@ f) Get the maximum matched score author for each of source author
 
 g) Take average of max matched scores for all source authors. This is the final similarity score between author lists.
 
-![SPECTER2 Author Evaluation Using Controlled Data](../doc/author_eval-SPECTER2.png)
+![SPECTER2 Author Evaluation Using Controlled Data](/gh-pages/assets/doc/author_eval-SPECTER2.png)
 
 ### Evaluation Using Highwire Controlled Dataset
 
@@ -258,7 +258,7 @@ We have decided to adopt a threshold value of 0.59 as our midpoint. This choice 
 
 ## Future R&D
 
-![Future R&D](../doc/author_embedding_future.png)
+![Future R&D](/gh-pages/assets/doc/author_embedding_future.png)
 
 ## References
 
